@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'show-hide-password';
+
+  password = '';
+
+  show = false;
+
+  ngOnInit(){
+    this.password = 'password';
+  }
+
+  onCLick(){
+    if(this.password === 'password'){
+      this.password = 'text';
+      this.show = true;
+    }else{
+      this.password = 'password';
+      this.show = false;
+    }
+  }
 }
